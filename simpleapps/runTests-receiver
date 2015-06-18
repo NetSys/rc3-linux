@@ -1,0 +1,27 @@
+#!/bin/bash
+
+gcc receiver.c -o bob
+gcc receiver_rc3.c -o carol
+
+for i in 1460000 730000 146000 1460 7300 14600 73000
+do
+	declare -i j
+	j=30000+$i/1460
+	echo $j
+        ./carol $j $i
+        sleep 5
+done
+
+sleep 2
+
+for i in 1460000 730000 146000 1460 7300 14600 73000
+do
+	declare -i j
+	j=40000+$i/1460
+	echo $j
+        ./bob $j $i
+        sleep 5
+done
+
+
+
