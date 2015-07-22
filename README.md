@@ -9,6 +9,7 @@ include/asm-generic/socket.h;
 include/net/sock.h;
 include/linux/tcp.h;
 include/net/tcp.h;
+net/core/sock.c;
 net/ipv4/ip_input.c;
 net/ipv4/ip_output.c;
 net/ipv4/tcp.c;
